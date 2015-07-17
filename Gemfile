@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
+gem "middleman-deploy"
 gem 'slim', '~> 3.0.6'
 gem "html2slim"
 gem "bourbon"
