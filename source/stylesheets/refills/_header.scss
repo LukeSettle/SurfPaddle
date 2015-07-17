@@ -10,8 +10,9 @@
 
   @include background-image(url($hero-image));
   background-position: top;
+  background-width: 90%;
+  background-height: 200em;
   background-repeat: no-repeat;
-  background-size: cover;
   padding-bottom: 3em;
 
   .hero-logo img {
