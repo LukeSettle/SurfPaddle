@@ -1,0 +1,85 @@
+.hero {  
+  $base-border-radius: 3px !default;
+  $action-color: #477DCA !default;
+  $large-screen: em(860) !default;
+  $hero-background-top: #7F99BE; 
+  $hero-background-bottom: #20392B;
+  $hero-color: white;
+  $gradient-angle: 10deg;
+  $hero-image:image-path("assets/header.jpg");
+
+  @include background-image(url($hero-image));
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3em;
+
+  .hero-logo img {
+    height: 4em;
+    margin-bottom: 1em;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: black;
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
+
+    .hero-copy {
+      text-align: center;
+      position:relative;
+      top: 7em;
+
+      .right a {
+        color: black;
+        float: right;
+        position:relative;
+        top: -10.2em;
+        margin: 0px 7px;
+       }
+
+      .right img{
+        float: right;
+        position:relative;
+        top: -10em;
+       }
+
+      .left img{
+        float: left;
+        position:relative;
+        top: -7.6em;
+        right: 5px;
+      }
+       .left a{
+        color:black;
+        float: left;
+        position:relative;
+        top: -6.8em;
+       }
+
+
+      h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+
+        @include media($large-screen) {
+          font-size: 3em;
+        }
+      }
+
+      p {
+        font-weight: 300;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto; 
+        color: black;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+        }
+      }
+    }
+  }
+}

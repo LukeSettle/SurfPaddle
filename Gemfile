@@ -3,6 +3,11 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.12"
+gem 'slim', '~> 3.0.6'
+gem "html2slim"
+gem "bourbon"
+gem "bitters"
+gem "neat"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
