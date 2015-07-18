@@ -1,3 +1,7 @@
+article{
+  margin:10%;
+}
+
 article.type-system-geometric {
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -14,7 +18,7 @@ article.type-system-geometric {
   text-align: left;
 
   h1, h2, h3, p {
-    margin: 0;
+    margin:0;
   }
 
   hr {

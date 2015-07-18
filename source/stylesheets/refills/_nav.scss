@@ -1,12 +1,12 @@
 .centered-navigation {
   $base-border-radius: 3px !default;
-  $dark-gray: #333 !default;
+  $dark-gray: black !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: #E7F1EC;
-  $centered-navigation-color: transparentize($base-font-color, 0.3);
+  $centered-navigation-color: #164267;
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
@@ -16,7 +16,6 @@
   $horizontal-bar-mode: $large-screen;
 
   background-color: none;
-  border-bottom: 1px solid darken($centered-navigation-background, 6%);
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
@@ -34,10 +33,6 @@
       opacity: .6;
       padding: .8em 0;
     }
-
-    @include media($horizontal-bar-mode) {
-      display: none;
-    }
   }
 
   .centered-navigation-mobile-menu {
@@ -51,10 +46,6 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    @include media ($horizontal-bar-mode) {
-      display: none;
-    }
-
     &:focus,
     &:hover {
       color: $centered-navigation-color-hover;
@@ -62,7 +53,29 @@
   }
 
   // Nav menu
+  a img{
+  position: relative;
+  top:2px;
+  left:7px;
+}
+p.mobile-logo.text{
+  color: $centered-navigation-color;
+    display: block;
+    
+    float: left;
+    font-weight: 700;
+    line-height: $centered-navigation-height;
+    margin: 0;
+    padding-right: $centered-navigation-submenu-padding;
+    text-decoration: none;
+    text-transform: uppercase;
 
+    &:focus,
+    &:hover {
+      color: $centered-navigation-color-hover;
+    }
+
+}
   .centered-navigation-wrapper {
     @include outer-container;
     @include clearfix;
@@ -74,7 +87,6 @@
   ul.centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
-    display: none;
     margin: 0 auto;
     overflow: visible;
     padding: 0;

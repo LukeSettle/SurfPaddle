@@ -1,0 +1,60 @@
+.footer {
+  $action-color: #477DCA !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $footer-background: #153963;
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+  position: bottom;
+
+  background: $footer-background;
+
+  .footer-logo {
+    margin-bottom: 2em;
+    text-align: left;
+    position: relative;
+    top: 1em;
+
+    img {
+      height: 2em;
+      position: relative;
+      top:1.2em;
+      left: 5px;
+    }
+    p{
+      color:$footer-link-color;
+      font-size: 12px;
+      position: relative;
+      left: 5em;
+    }
+  } 
+
+  .footer-links {
+    display: inline-block;
+    @include clearfix;
+    margin-bottom: $base-spacing;
+
+    @include media($medium-screen) {
+      @include shift(3);
+      float: right;
+      position: relative;
+      top:-2.5em;
+    }
+  }
+  
+  li{
+    display: inline;
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  li a {
+    color: $footer-link-color;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+}
