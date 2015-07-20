@@ -1,4 +1,5 @@
 .hero {  
+  font-family: 'Oswald', sans-serif;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
   $large-screen: em(860) !default;
@@ -27,6 +28,10 @@
     margin: auto;
     padding: 3.5em;
     text-align: center;
+    h1{
+      font-size: 4em;
+      color: white;
+    }
 
     .hero-copy {
       text-align: center;
@@ -61,12 +66,12 @@
        }
 
 
-      h1 {
-        font-size: 3em;
+      .hero .hero-inner .hero-copy h1 {
+        font-size: 6em;
         margin-bottom: 0.5em;
 
         @include media($large-screen) {
-          font-size: 3em;
+          font-size: 6em;
         }
       }
 

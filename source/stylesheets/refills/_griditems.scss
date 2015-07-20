@@ -2,6 +2,11 @@
   width: (100% / 12) * $columns;
 }
 
+.popular{
+      font-size: 3em;
+      text-align: center;
+    }
+
 .grid-items {
   $action-color: #477DCA !default;
   $base-background-color: white !default;
@@ -27,9 +32,9 @@
   .grid-item {
     @include transition (all 0.2s ease-in-out);
     cursor: pointer;
-    float: left;
+    display: block;
+    margin: 0px auto;
     outline: none;
-    text-align: center;
     text-decoration: none;
     width: 295px;
     height: 300px;
@@ -49,7 +54,7 @@
       font-size: 1.3em;
       position: relative;
       bottom:2em;
-      right: 4em;
+      left: 5px;
       display: inline;
     }
 }
